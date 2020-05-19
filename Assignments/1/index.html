@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta lang="en">
+        <meta charset="utf-8">
+        <title>Add a Tourist Place</title>
+        <link href="styles/style.css" rel="stylesheet" type="text/css">
+    </head>
+    <body>
+        <h1 id="header">Add a new Tourist Place</h1>
+        <form>
+            <ul>
+                <li>
+                    <label for="name">Name: </label>
+                    <input type="text" id="name">
+                </li>
+                <li>
+                    <label for="address">Address: </label>
+                    <input type="text" id="address">
+                </li>
+                <li>
+                    <label for="rating">Rating: </label>
+                    <input type="number" id="rating" min=1 max=5 step=0.5>
+                </li>
+                <li>
+                    <label for="type">Type: </label>
+                    <input type="text" id="type">
+                </li>
+                <li>
+                    <label for="pic">Picture: </label>
+                    <input type="file" accept="image/*" id="pic">
+                </li>
+                <li>
+                    <button type="submit">Submit</button>
+                    <button type="reset">Reset</button>
+                </li>
+            </ul>
+        </form>
+    </body>
+</html>

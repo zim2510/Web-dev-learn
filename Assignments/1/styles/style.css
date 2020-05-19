@@ -1,0 +1,9 @@
+label{
+	width: 60px;
+	text-align: left;
+	display: inline-block;
+}
+
+ul:hover{
+	list-style-type: bengali;
+}
