@@ -1,5 +1,9 @@
 # Daily update
 
+Day 3 - Going on. Will update at the end of the day.
+
+Day 2 - Learned more about forms and CSS. Started to work on Assignment 1 and updating it as I learn more.
+
 Day 1 - Learned about different HTML elements and tags. Took an overview of CSS and JS.
 
 Day 0 - Learned about Client - (Proxy) - Server model. Read about HTTP messages, headers, status codes etc. 
