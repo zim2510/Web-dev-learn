@@ -1,9 +1,73 @@
+*{
+	border: 1px solid pink;
+}
+
+h1{
+	text-align: center;	
+}
+
+form{
+	margin: 0 auto;
+	width: 800px;
+	border: 5px;
+}
+
+input{
+	width: 80%;
+	height: 25px;
+}
+
+input[type="file"]{
+	border: 1px solid black;
+	width: 80%;
+	height: 25px;
+}
+
 label{
-	width: 60px;
+	width: 75px;
 	text-align: left;
 	display: inline-block;
 }
 
-ul:hover{
-	list-style-type: bengali;
+div{
+	width: 825px;
+	margin: 0 auto;
+}
+
+form p{
+	margin-top: 5px;
+	margin-bottom: 0px;
+}
+
+#control{
+	margin-right: 0px;
+	float: right;
+}
+
+button{
+	height: 45px;
+	font-size: large;
+	background-blend-mode: hard-light ;
+	color: white;
+}
+
+.button-green{
+	background-color: green;
+}
+
+.button-red{
+	background-color: red;
+	box-shadow: rgb(0, 0, 0);
+}
+
+.button-yellow{
+	background-color: orange;
+}
+
+a{
+	color: rgb(0, 0, 255);
+	padding-left: 0px;
+	padding-right: auto;
+	float: right;
+	text-align: right;
 }

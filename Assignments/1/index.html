@@ -8,33 +8,36 @@
     </head>
     <body>
         <h1 id="header">Add a new Tourist Place</h1>
-        <form>
-            <ul>
-                <li>
-                    <label for="name">Name: </label>
-                    <input type="text" id="name">
-                </li>
-                <li>
-                    <label for="address">Address: </label>
-                    <input type="text" id="address">
-                </li>
-                <li>
-                    <label for="rating">Rating: </label>
-                    <input type="number" id="rating" min=1 max=5 step=0.5>
-                </li>
-                <li>
-                    <label for="type">Type: </label>
-                    <input type="text" id="type">
-                </li>
-                <li>
-                    <label for="pic">Picture: </label>
-                    <input type="file" accept="image/*" id="pic">
-                </li>
-                <li>
-                    <button type="submit">Submit</button>
-                    <button type="reset">Reset</button>
-                </li>
-            </ul>
-        </form>
+        <div>
+            <form>
+                    <p>
+                        <label for="name">Name: </label>
+                        <input type="text" id="name">
+                    </p>
+                    <p>
+                        <label for="address">Address: </label>
+                        <input type="text" id="address">
+                    </p>
+                    <p>
+                        <label for="rating">Rating: </label>
+                        <input type="number" id="rating" min=1 max=5 step=0.5 value=1>
+                    </p>
+                    <p>
+                        <label for="type">Type: </label>
+                        <input type="text" id="type">
+                    </p>
+                    <p>
+                        <label for="pic">Picture: </label>
+                        <input type="file" accept="image/*" id="pic">
+                    </p>
+                    <p id="control">
+                        <button class="button-green" type="submit">Submit</button>
+                        <button class="button-yellow" type="reset">Reset</button>
+                    </p>
+                    <p>
+                        <a href="">Back to Tourist Place List</a>
+                    </p>
+            </form>
+        </div>
     </body>
 </html>
