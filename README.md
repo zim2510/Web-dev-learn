@@ -1,6 +1,6 @@
 # Daily update
 
-Day 4 - Started. Planning to finish assignment 1 and 2 by the end of the day.
+Day 4 - Finished assignment 1.
 
 Day 3 - Learned CSS and HTML tables. Couldn't finish as planned due to power outage.
 
