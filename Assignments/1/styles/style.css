@@ -1,5 +1,5 @@
 *{
-	border: 1px solid pink;
+	//border: 1px solid pink;
 }
 
 h1{
@@ -9,19 +9,22 @@ h1{
 form{
 	margin: 0 auto;
 	width: 800px;
-	border: 5px;
 }
 
 input{
-	width: 80%;
+	width: 700px;
 	height: 25px;
+	background-color: gray;
+	background-blend-mode: overlay;
+	
 }
 
-input[type="file"]{
-	border: 1px solid black;
-	width: 80%;
+ input[type="file"]{
 	height: 25px;
-}
+	outline-color: red;
+
+
+} 
 
 label{
 	width: 75px;
