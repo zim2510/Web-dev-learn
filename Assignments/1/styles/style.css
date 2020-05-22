@@ -1,25 +1,25 @@
-body{
+.add-body{
 	background-color: rgb(187, 191, 188);
 }
 
-.container{
+.container-1{
 	width: 70%;
 	margin: 0 auto;
 }
 
-h1{
+.header-center{
 	text-align: center;
 	width: 100%;
 }
 
-form{
+.form-center{
 	margin: 0 auto;
 	width: 100%;
 	padding: 25px;
 	box-sizing: border-box;
 }
 
-input{
+.form-input{
 	width: 80%;
 	height: 35px;
 	border-radius: 10px;
@@ -28,7 +28,7 @@ input{
 	padding-left: 15px;
 }
 
-input[type=file]{
+.form-file{
 	border: 1px gray solid;
 	padding: 3px 3px;
 	padding-left: 18px;
@@ -54,10 +54,13 @@ form p{
 
 .form-button{
 	height: 45px;
-	width: 60px;
+	min-width: 60px;
 	color: white;
 	padding: 2px;
 	margin: 1px;
+}
+
+.float-right{
 	float: right;
 }
 
@@ -77,8 +80,56 @@ form p{
 	background-color: orange;
 }
 
+.button-blue{
+	background-color: rgb(51, 51, 177);
+}
+
 #back{
 	color: rgb(0, 0, 255);
-	float: right;
 	font-weight: bold;
+}
+
+.container-2{
+	width: 90%;
+	margin: 10px;
+	margin-top: 20px;
+}
+
+.input-index{
+	width: 50%;
+	margin-bottom: 20px;
+	background: white;
+}
+
+table{
+	border: 2px black solid;
+	width: 100%;
+}
+
+th{
+	background: black;
+	color: white;
+	font-size: 25px;
+}
+
+td{
+	text-align: center;
+}
+
+.table-image{
+	height: 150px;
+	width: auto;
+}
+
+#create-new{
+	margin-top: 30px;
+}
+
+.index-button{
+	text-decoration: none;
+	color: white;
+}
+
+tr:nth-child(even){
+	background-color: #ddd;
 }
