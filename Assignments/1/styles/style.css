@@ -1,57 +1,68 @@
-*{
-	//border: 1px solid pink;
+body{
+	background-color: rgb(187, 191, 188);
+}
+
+.container{
+	width: 70%;
+	margin: 0 auto;
 }
 
 h1{
-	text-align: center;	
+	text-align: center;
+	width: 100%;
 }
 
 form{
 	margin: 0 auto;
-	width: 800px;
+	width: 100%;
+	padding: 25px;
+	box-sizing: border-box;
 }
 
 input{
-	width: 700px;
-	height: 25px;
-	background-color: gray;
-	background-blend-mode: overlay;
-	
+	width: 80%;
+	height: 35px;
+	border-radius: 10px;
+	background-color:gray;
+	border-width: 2px;
+	padding-left: 15px;
 }
 
- input[type="file"]{
-	height: 25px;
-	outline-color: red;
+input[type=file]{
+	border: 1px gray solid;
+	padding: 3px 3px;
+	padding-left: 18px;
+}
 
-
-} 
-
-label{
-	width: 75px;
+form label{
+	width: 15%;
 	text-align: left;
 	display: inline-block;
 }
 
-div{
-	width: 825px;
-	margin: 0 auto;
-}
-
 form p{
-	margin-top: 5px;
+	margin-top: 15px;
 	margin-bottom: 0px;
 }
 
+
 #control{
-	margin-right: 0px;
+	margin-top: 15px;
+	box-sizing: content-box;
+	margin-right: 2.5%;
+}
+
+.form-button{
+	height: 45px;
+	width: 60px;
+	color: white;
+	padding: 2px;
+	margin: 1px;
 	float: right;
 }
 
-button{
-	height: 45px;
-	font-size: large;
-	background-blend-mode: hard-light ;
-	color: white;
+.clear{
+	clear: both;
 }
 
 .button-green{
@@ -60,17 +71,14 @@ button{
 
 .button-red{
 	background-color: red;
-	box-shadow: rgb(0, 0, 0);
 }
 
 .button-yellow{
 	background-color: orange;
 }
 
-a{
+#back{
 	color: rgb(0, 0, 255);
-	padding-left: 0px;
-	padding-right: auto;
 	float: right;
-	text-align: right;
+	font-weight: bold;
 }
