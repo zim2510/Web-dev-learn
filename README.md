@@ -1,5 +1,9 @@
 # Daily update
 
+Day 8 - Started working on assignment 2.
+
+Day (5 + 6 + 7) - Learned JS.
+
 Day 4 - Finished assignment 1.
 
 Day 3 - Learned CSS and HTML tables. Couldn't finish as planned due to power outage.
