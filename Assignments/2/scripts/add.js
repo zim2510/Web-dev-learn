@@ -31,7 +31,7 @@ form.addEventListener("submit", (e)=>{
     if(!validTypeName.includes(placeType.value)){
         alert("Provide proper type name please\n");
     }
-    else if(form.elements[4].files[0].size>200*1024){
+    else if(form.elements[4].files[0] && form.elements[4].files[0].size>200*1024){
         alert("File is too big. Maximum allowed size is 200KB.");
     }
     else{

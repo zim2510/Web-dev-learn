@@ -21,6 +21,11 @@ function imgToString(file, place, update=false)
         update?alert("Place Updated"):alert("New Place Added");
         location.assign("/add.html");
     });
+    if(update && !file){
+        savePlaces();
+        update?alert("Place Updated"):alert("New Place Added");
+        location.assign("/add.html");
+    }
     reader.readAsDataURL(file);
 }
 
