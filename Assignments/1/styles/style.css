@@ -6,15 +6,19 @@
 
 html, body{
 	height: 100%;
+}
+
+
+.wrapper{
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	height: 100%;
 }
 
 .header-center{
 	text-align: center;
 	width: 100%;
-	margin-bottom: 25px;
 }
 
 .form-center{
