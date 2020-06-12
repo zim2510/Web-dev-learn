@@ -23,7 +23,7 @@ function sortPlaces(){
 }
 
 function render(){
-    clearTable();
+    $("tr").remove(".entry");
     let filteredPlace = allPlace.filter((val)=>{
         return val.name.toLowerCase().includes(filterText.toLowerCase());
     });
@@ -34,13 +34,6 @@ function render(){
     })
 }
 
-function clearTable()
-{
-    let table = document.querySelector("table");
-    while(table.childElementCount!=1){
-        table.deleteRow(1);
-    }
-}
 
 function createRow(place){
 
@@ -49,40 +42,32 @@ function createRow(place){
     let rating = document.createElement("td");
     let img = document.createElement("td");
     let action = document.createElement("td");
-
-    name.textContent = place.name;
-    address.textContent = place.address;
-    rating.textContent = place.rating;
-
-
-
-    let pic = document.createElement('canvas');
-    pic.classList.add("table-image");
-    img.append(pic);
-    drawImage(place.imgString, pic);
-
     let btnDiv = document.createElement("div");
-
     let btnUpdate = document.createElement("button");
     let btnDelete = document.createElement("button");
-    btnUpdate.textContent = "Update";
-    btnDelete.textContent = "Delete";
+    let pic = document.createElement('canvas');
+    let row = document.createElement("tr");
 
-    btnUpdate.classList.add("form-button");
-    btnUpdate.classList.add("button-blue");
 
-    btnDelete.classList.add("form-button");
-    btnDelete.classList.add("button-red");
+    $(name).text(place.name);
+    $(address).text(place.address);
+    $(rating).text(place.rating);
+    $(pic).addClass("table-image");
+    $(btnUpdate).addClass("form-button button-blue").text("Update");
+    $(btnDelete).addClass("form-button button-red").text("Delete");
+    $(row).addClass("entry");
 
+
+
+    
+    img.append(pic);
+    drawImage(place.imgString, pic);
     makeDeleteButton(btnDelete, place.id);
     makeUpdateButton(btnUpdate, place.id);
 
     btnDiv.append(btnUpdate);
     btnDiv.append(btnDelete);
-
     action.append(btnDiv);
-
-    let row = document.createElement("tr");
     row.append(name);
     row.append(address);
     row.append(rating);
@@ -93,7 +78,7 @@ function createRow(place){
 }
 
 function makeDeleteButton(btnDelete, id) {
-    btnDelete.addEventListener("click", (e)=>{
+    $(btnDelete).click((e)=>{
         let index = allPlace.findIndex((elem)=>elem.id==id);
         allPlace.splice(index, 1);
         savePlaces();
@@ -102,19 +87,19 @@ function makeDeleteButton(btnDelete, id) {
 }
 
 function makeUpdateButton(btnUpdate, id) {
-    btnUpdate.addEventListener("click", (e)=>{
+    $(btnUpdate).click((e)=>{
         location.assign(`add.html#${id}`);
     })
 }
 
 
-document.querySelector("#search").addEventListener("keyup", (e)=>{
+$("#search").keyup((e)=>{
     filterText = e.target.value;
     console.log("Text "+ filterText);
     render();
 });
 
-document.querySelector("#sorting").addEventListener("change", (e)=>{
+$("#sorting").change((e)=>{
     sorting = e.target.value;
     sortPlaces();
     render();

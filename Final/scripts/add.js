@@ -2,18 +2,18 @@
 
 let allPlace = readPlace();
 let maxId = Number(localStorage.getItem("count"));
-let hash = location.hash.substr(1);
-let form = document.querySelector("#addPlace");
+let hash = $(location).attr("hash").substr(1);
+let form = $(document).find("#addPlace")[0];
 let validTypeName = ["Beach", "Hills", "Fountain", "Landmark"];
 
 if(maxId==null) maxId = 0;
 
 if(hash){
     let index = allPlace.findIndex((elem)=>elem.id==hash);
-    form.elements[0].value = allPlace[index].name;
-    form.elements[1].value = allPlace[index].address;
-    form.elements[2].value = allPlace[index].rating;
-    form.elements[3].value = allPlace[index].type;
+    $(form[0]).val(allPlace[index].name); 
+    $(form[1]).val(allPlace[index].address);
+    $(form[2]).val(allPlace[index].rating);
+    $(form[3]).val(allPlace[index].type);
 }
 
 let Place = function(name, address, rating, type) {
@@ -22,12 +22,14 @@ let Place = function(name, address, rating, type) {
     this.rating = rating;
     this.type = type;
     this.id = ++maxId;
+    localStorage.setItem("count", maxId);
 }
 
 
-form.addEventListener("submit", (e)=>{
+$(form).submit((e)=>{
     e.preventDefault();
-    let placeType = form.elements[3];
+    let placeType = form[3];
+
     if(!validTypeName.includes(placeType.value)){
         alert("Provide proper type name please\n");
     }
@@ -35,18 +37,18 @@ form.addEventListener("submit", (e)=>{
         alert("File is too big. Maximum allowed size is 200KB.");
     }
     else{
-        placeType.setCustomValidity("");
         if(!hash){
-            let newPlace = new Place(e.target.elements[0].value, e.target.elements[1].value, e.target.elements[2].value, e.target.elements[3].value);
+            let newPlace = new Place($(form[0]).val(), $(form[1]).val(), $(form[2]).val(), $(form[3]).val());
             allPlace.push(newPlace);
-            imgToString(e.target.elements[4].files[0], newPlace);
+            imgToString(form[4].files[0], newPlace);
         }
         else{
             let index = allPlace.findIndex((elem)=>elem.id==hash);
-            allPlace[index].name = form.elements[0].value;
-            allPlace[index].address = form.elements[1].value;
-            allPlace[index].rating = form.elements[2].value;
-            allPlace[index].type = form.elements[3].value;
+
+            allPlace[index].name = $(form[0]).val();
+            allPlace[index].address = $(form[1]).val();
+            allPlace[index].rating = $(form[2]).val();
+            allPlace[index].type = $(form[3]).val();
             imgToString(form.elements[4].files[0], allPlace[index], true);
         }
     }
